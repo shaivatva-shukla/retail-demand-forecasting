@@ -3,21 +3,13 @@ venv/
 env/
 .venv/
 
-# Python Cache
+# Byte-compiled / cache files
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Jupyter Notebooks
 .ipynb_checkpoints/
 
-# Datasets & ML Models (Do not commit heavy files)
+# Datasets and Archives (Keep heavy Kaggle data local)
+data/
 *.csv
-*.dat
-*.pkl
-*.joblib
-*.h5
-*.model
 *.zip
 
 # OS Generated Files

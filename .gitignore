@@ -1,0 +1,17 @@
+# Python Virtual Environments
+venv/
+env/
+.venv/
+
+# Byte-compiled / cache files
+__pycache__/
+.ipynb_checkpoints/
+
+# Datasets and Archives (Keep heavy Kaggle data local)
+data/
+*.csv
+*.zip
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

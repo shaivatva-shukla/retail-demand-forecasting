@@ -1,26 +1,26 @@
-# Retail Demand Forecasting
+# Supply Chain & Retail Demand Forecaster
 
-A time-series forecasting pipeline designed to predict future product sales based on historical daily data. The goal of this project is to optimize supply chain logistics—minimizing storage costs from overstocking while preventing revenue loss from stockouts.
 
-## Tech Stack
-* **Language:** Python
-* **Data Processing:** Pandas, NumPy
-* **Time Series Modeling:** Statsmodels (ARIMA) / Prophet
-* **Visualization:** Matplotlib, Seaborn
+An end-to-end statistical time-series forecasting pipeline built to optimize retail inventory tracking. This project models consumer habits and seasonal patterns to predict future retail sales volumes, addressing the costly business problem of overstocking and understocking.
 
-## The Business Problem & Methodology
+##  Project Overview
 
-Predicting inventory needs requires understanding natural human purchasing behavior over time. Instead of relying on complex neural networks, this pipeline uses classical time-series analysis to isolate and model specific patterns in the data:
+Knowing exactly how much inventory to stock is a critical supply chain challenge. This project leverages historical daily sales data to forecast a 90-day future demand window. By isolating behavioral variance and applying autoregressive statistical modeling, the pipeline provides actionable, data-driven inventory projections.
 
-1. **Trend:** The overarching trajectory of the business (e.g., year-over-year growth).
-2. **Seasonality:** Predictable, recurring spikes in demand (e.g., increased sales during December holidays or weekend surges).
-3. **External Variables:** Adjusting forecasts based on known anomalies, such as specific holidays or promotional events.
+### Key Features
+* **Statistical Time-Series Forecasting:** Accomplished accurate demand forecasting using the Statsmodels and `pmdarima` libraries (ARIMA) to predict future sales volumes.
+* **Behavioral Feature Engineering:** Isolated market variance by engineering specific temporal features to capture multi-cycle seasonality, major US holiday trends, and day-of-the-week fluctuations.
+* **Automated Parameter Tuning:** Utilized Augmented Dickey-Fuller (ADF) testing for stationarity checks and algorithmic stepwise searching to determine optimal $(p, d, q)$ and seasonal parameters.
+* **Dynamic Data Visualization:** Constructed predictive data visualizations using Matplotlib to validate future demand projections and 95% confidence intervals against historical smoothed growth trends.
 
-The model is trained on historical retail data (e.g., Store Item Demand Forecasting Challenge data) to project future daily sales volumes with high accuracy. 
+##  Dataset
+This project uses the **Store Item Demand Forecasting Challenge** dataset from Kaggle. It contains 5 years of daily sales data across multiple stores and items. 
 
-## Local Setup & Execution
+The pipeline automatically aggregates this granular data into a univariate time series representing total daily corporate sales volume.
 
-### 1. Clone the repository
+##  Installation & Setup
+
+**1. Clone the repository**
 ```bash
-git clone [https://github.com/shaivatva/retail-demand-forecasting.git](https://github.com/shaivatva/retail-demand-forecasting.git)
+git clone [https://github.com/shaivatva-shukla/retail-demand-forecasting.git](https://github.com/shaivatva-shukla/retail-demand-forecasting.git)
 cd retail-demand-forecasting
